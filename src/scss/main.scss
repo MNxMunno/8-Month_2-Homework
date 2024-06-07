@@ -24,6 +24,11 @@ a {
 }
 
 header {
+  position: sticky;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #fff;
   padding: 10px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   nav {
@@ -48,6 +53,40 @@ header {
         font-family: sans-serif;
       }
     }
+    .menu {
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 525px) {
+    nav {
+      .nav__items {
+        position: absolute;
+        background: #fff;
+        opacity: 0.9;
+        width: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        top: -500px;
+        justify-content: center;
+        gap: 10px;
+        flex-direction: column;
+        transition: 0.2s;
+        padding: 20px;
+        &.show {
+          top: 55px;
+          box-shadow: 3px 3px 5px rgba(123, 123, 123, 0.2);
+        }
+      }
+      .menu {
+        background: transparent;
+        display: block;
+        svg {
+          font-size: 32px;
+        }
+      }
+    }
   }
 }
 
@@ -58,7 +97,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    flex-wrap: wrap;
+    gap: 32px;
     .card {
       h1 {
         font-size: 48px;
@@ -106,6 +146,7 @@ header {
         background: #ccc;
         height: 600px;
 
+        width: 100%;
         width: 600px;
         img {
           width: 100%;
@@ -121,6 +162,40 @@ header {
         padding: 15px 30px;
         border-radius: 12px;
         background: #16c6c6;
+      }
+    }
+  }
+  @media only screen and (max-width: 606px) {
+    .cards {
+      justify-content: center;
+      .card {
+        h1 {
+          font-size: 32px;
+          line-height: 48px;
+        }
+        h2 {
+          font-size: 28px;
+          span {
+            font-size: 28px;
+          }
+        }
+        p {
+          font-size: 16px;
+        }
+        .img {
+          width: 400px;
+          height: 400px;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 414px) {
+    .cards {
+      .card {
+        .img {
+          width: 300px;
+          height: 300px;
+        }
       }
     }
   }
@@ -165,6 +240,15 @@ header {
       }
     }
   }
+  @media only screen and (max-width: 555px) {
+    .content {
+      .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+    }
+  }
 }
 
 .projects {
@@ -198,7 +282,7 @@ header {
       flex-direction: column;
       gap: 24px;
       input {
-        width: 28%;
+        width: 337px;
         height: 40px;
         outline: none;
         padding: 20px;
