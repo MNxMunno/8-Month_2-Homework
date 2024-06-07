@@ -50,24 +50,59 @@ header {
 .hero {
   padding-top: 10px;
   width: 100%;
-  background: #000;
-  // background: linear-gradient(
-  //   90deg,
-  //   rgba(84, 195, 41, 1) 21%,
-  //   rgba(0, 18, 255, 1) 100%
-  // );
   .cards {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
 
     .card {
       h1 {
+        font-size: 48px;
+        color: #222147;
+        font-family: sans-serif;
+        line-height: 72px;
+      }
+      h2 {
         font-size: 40px;
-        color: #fff;
+        color: #222147;
+        font-family: sans-serif;
+
+        span {
+          color: #16c6c6;
+          font-size: 40px;
+        }
+      }
+      p {
+        max-width: 550px;
+        color: #222147;
+        font-family: sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        padding-top: 20px;
+      }
+      .contact {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding-top: 20px;
+        a {
+          background: transparent;
+          border: 2px solid #16c6c6;
+          padding: 10px 12px;
+          border-radius: 50% 50%;
+          svg {
+            font-size: 28px;
+            color: #16c6c6;
+          }
+        }
       }
       .img {
         overflow: hidden;
+        border-radius: 50% 50%;
+        background: #ccc;
+        height: 600px;
+
+        width: 600px;
         img {
           width: 100%;
           border-radius: 50% 50%;
